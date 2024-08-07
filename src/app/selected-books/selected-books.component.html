@@ -1,0 +1,7 @@
+<div style="margin-left: 75%;margin-top: -60%;width: 60%" id="select" >
+    <h2>Selected Books Preview</h2>
+    <div *ngFor="let book of books" class="book-card">
+      <app-book-card [book]="book"></app-book-card>
+    </div>
+  </div>
+  

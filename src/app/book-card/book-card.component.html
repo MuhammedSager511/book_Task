@@ -1,0 +1,10 @@
+<div *ngIf="book" [style.background-color]="backgroundColor" class="card">
+  <h3>{{ book.title }}</h3>
+  <p>{{ book.author_name?.[0] }}</p>
+  <label for="bg-color">Choose background color:</label>
+  <div class="color-options">
+    <div class="color-option" style="background-color: #ffdddd;" (click)="changeBackground('#ffdddd')"></div>
+    <div class="color-option" style="background-color: #ddffdd;" (click)="changeBackground('#ddffdd')"></div>
+    <div class="color-option" style="background-color: #ddddff;" (click)="changeBackground('#ddddff')"></div>
+  </div>
+</div>

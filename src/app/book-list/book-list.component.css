@@ -1,0 +1,48 @@
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px; 
+  }
+  
+  .book-card a {
+    display: block;
+    text-decoration: none; 
+    color: #020202; 
+    
+  }
+  
+  .book-card a:hover {
+    color: #0056b3; /
+  }
+  #sel{
+    border: 2px solid #ccc;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 60%;
+    border-radius: 5px;
+    margin: 10px;
+    height: 50px;
+  }
+  #input{
+   width: 90%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+
+
+
+  .card-body {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .card-title {
+    margin: 0;
+  }
+  
+  .btn-danger {
+    margin-left: auto; 
+  }
+  

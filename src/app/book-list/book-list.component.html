@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- Available Books Section -->
+    <div class="col-md-4" style="width: 30%;margin-left: 5%;margin-top: 3%;">
+      
+      <input id="input" type="text" class="form-control mb-3" placeholder="Search for a book" [(ngModel)]="searchTerm" (input)="filterBooks()">
+      <div class="overflow-auto" style="height: 400px;">
+        <div class="card mb-3 book-card" *ngFor="let book of filteredBooks">
+          <div class="card-body">
+            <a class="card-title" (click)="addBook(book)">{{ book.title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selected Books Section -->
+    <div class="col-md-4" style="width: 40%;margin-left: 37%;margin-top: -22%;" >
+      <h2>Selected Books</h2>
+      <div class="overflow-auto" style="height: 400px;">
+        <div class="card mb-3 selected-book-card" *ngFor="let book of selectedBooks">
+          <div class="card-body" id="sel">
+            <h5 class="card-title">{{ book.title }}</h5>
+            <button class="btn btn-danger" (click)="confirmDeletion(book)" style="color: red;">x</button>
+          </div>
+        </div>
+      </div>
+      <app-selected-books [books]="selectedBooks"></app-selected-books>
+    </div>
+  </div>
+</div>
